@@ -41,6 +41,96 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       padding: 0 28px;
     }
 
+    /* ── Tip banner ── */
+    .tip-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #fdf3e3;
+      border: 1px solid #eaceA0;
+      border-radius: 14px;
+      padding: 13px 16px;
+      margin-bottom: 18px;
+    }
+
+    .tip-icon {
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .tip-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      color: #6b4a23;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    @media (min-width: 900px) {
+      .tip-text { font-size: 15px; }
+      .tip-icon { font-size: 20px; }
+    }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      margin-top: 16px;
+      background: #2a1a0e;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .disclaimer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 18px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .disclaimer-header-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .disclaimer-arrow {
+      color: #c8a97e;
+      font-size: 17px;
+      transition: transform .3s;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .disclaimer.open .disclaimer-arrow {
+      transform: rotate(90deg);
+    }
+
+    .disclaimer-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .disclaimer.open .disclaimer-body {
+      max-height: 300px;
+    }
+
+    .disclaimer-text {
+      padding: 0 18px 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,.68);
+      line-height: 1.55;
+    }
+
+    @media (min-width: 900px) {
+      .disclaimer-header-title { font-size: 16px; }
+      .disclaimer-text { font-size: 14px; padding: 0 24px 20px; }
+      .disclaimer-header { padding: 18px 24px; }
+    }
+
     /* ── Gift Card ── */
     .gift-card {
       position: relative;
@@ -476,6 +566,12 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <body>
   <div class="phone-wrap">
 
+    <!-- Tip Banner -->
+    <div class="tip-banner">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text">How to receive your reward: pick the gift card(s) you want below, tap Get Started, complete the steps, and your reward will be sent to the email you provide once verified.</span>
+    </div>
+
     <!-- Gift Card -->
     <div class="gift-card">
       <div class="card-top-row">
@@ -580,6 +676,17 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <!-- AFFILIATE LINK: replace the window.location.href line below with your affiliate URL -->
       <button class="cta-btn" id="cta" type="button">Get Started</button>
       <p class="cta-fine">Available for US, UK, AU, CA residents</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer" id="disclaimer">
+      <div class="disclaimer-header" onclick="document.getElementById('disclaimer').classList.toggle('open')">
+        <span class="disclaimer-header-title">⚠️ Rewards are not guaranteed</span>
+        <span class="disclaimer-arrow">›</span>
+      </div>
+      <div class="disclaimer-body">
+        <p class="disclaimer-text">Receiving a reward is not guaranteed. It depends on successfully completing and passing verification for all required steps and deals. Availability, eligibility, and processing times may vary by region and are subject to change without notice. This page is not affiliated with, endorsed by, or sponsored by any of the brands shown.</p>
+      </div>
     </div>
 
   </div>
