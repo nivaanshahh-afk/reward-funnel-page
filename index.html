@@ -425,87 +425,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       letter-spacing: .2px;
     }
 
-    /* ── FAQ ── */
-    .faq-section {
-      margin-top: 28px;
-      background: #2a1a0e;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .faq-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .faq-header-title {
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .faq-arrow {
-      color: #c8a97e;
-      font-size: 18px;
-      transition: transform .3s;
-      line-height: 1;
-    }
-
-    .faq-section.open .faq-arrow {
-      transform: rotate(90deg);
-    }
-
-    .faq-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .35s ease;
-    }
-
-    .faq-section.open .faq-body {
-      max-height: 600px;
-    }
-
-    .faq-divider {
-      height: 1px;
-      background: rgba(255,255,255,.08);
-      margin: 0 20px;
-    }
-
-    .faq-item {
-      padding: 16px 20px;
-    }
-
-    .faq-item + .faq-item {
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
-
-    .faq-q {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: #c8a97e;
-      margin-bottom: 5px;
-      line-height: 1.3;
-    }
-
-    .faq-a {
-      font-size: 13px;
-      color: rgba(255,255,255,.72);
-      line-height: 1.55;
-    }
-
-    @media (min-width: 900px) {
-      .faq-header-title { font-size: 19px; }
-      .faq-q   { font-size: 16px; }
-      .faq-a   { font-size: 15px; }
-      .faq-item { padding: 20px 26px; }
-      .faq-header { padding: 22px 26px; }
-    }
-
     /* tablet */
     @media (min-width: 500px) {
       body { padding: 40px 0 60px; background: #f0ece6; }
@@ -652,37 +571,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <!-- AFFILIATE LINK: replace the window.location.href line below with your affiliate URL -->
       <button class="cta-btn" id="cta" type="button">Get Started</button>
       <p class="cta-fine">Available for US, UK, AU, CA residents</p>
-    </div>
-
-    <!-- FAQ -->
-    <div class="faq-section open" id="faq">
-      <div class="faq-header" onclick="document.getElementById('faq').classList.toggle('open')">
-        <span class="faq-header-title">Common Questions</span>
-        <span class="faq-arrow">›</span>
-      </div>
-      <div class="faq-body">
-        <div class="faq-divider"></div>
-        <div class="faq-item">
-          <div class="faq-q">How long do the deals take?</div>
-          <div class="faq-a">Quick 10–20 minute completion time per deal.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">What are deals?</div>
-          <div class="faq-a">Simple tasks like app downloads, surveys, or free trials.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Is this really free?</div>
-          <div class="faq-a">Yes — completing the required deals is how you qualify. No purchase necessary.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">How do I receive my reward?</div>
-          <div class="faq-a">Once your deals are verified (usually within 24–48 hours) your gift card is issued via email.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Can I claim more than one reward?</div>
-          <div class="faq-a">Yes! Select all the rewards you want above and complete the steps for each one.</div>
-        </div>
-      </div>
     </div>
 
   </div>
