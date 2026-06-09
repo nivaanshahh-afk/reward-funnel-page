@@ -81,10 +81,49 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     }
 
     /* ── Disclaimer (static) ── */
-    .disclaimer-static {
-      margin-top: 16px;
+    /* ── Warning notice ── */
+    .warning-notice {
+      background: #fff8e1;
+      border: 2px solid #f9a825;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .warning-notice-icon {
+      font-size: 22px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .warning-notice-title {
       font-family: 'Inter', sans-serif;
-      font-size: 11px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #e65100;
+      margin-bottom: 5px;
+      line-height: 1.2;
+    }
+
+    .warning-notice-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      color: #5d3a00;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    @media (min-width: 900px) {
+      .warning-notice-title { font-size: 16px; }
+      .warning-notice-body  { font-size: 14px; }
+    }
+
+    /* ── Fine print disclaimer ── */
+    .disclaimer-static {
+      margin-top: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
       color: #a09080;
       line-height: 1.55;
       text-align: center;
@@ -92,7 +131,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     }
 
     @media (min-width: 900px) {
-      .disclaimer-static { font-size: 13px; }
+      .disclaimer-static { font-size: 12px; }
     }
 
     /* ── Generic card icon ── */
@@ -648,6 +687,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </div>
 
     <!-- CTA -->
+    <!-- Warning notice -->
+    <div class="warning-notice">
+      <span class="warning-notice-icon">⚠️</span>
+      <p class="warning-notice-title">Getting a reward is NOT guaranteed</p>
+      <p class="warning-notice-body">You <strong>may or may not</strong> receive a reward. To even have a chance, you must complete <strong>all</strong> the required steps and deals. After that, your answers are checked — and only people who fully qualify will receive anything. Most people do not qualify.</p>
+    </div>
+
     <div class="cta-wrap">
       <!-- AFFILIATE LINK: replace the window.location.href line below with your affiliate URL -->
       <button class="cta-btn" id="cta" type="button">Get Started</button>
@@ -655,7 +701,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </div>
 
     <!-- Disclaimer -->
-    <p class="disclaimer-static">⚠️ Rewards are not guaranteed. Completing all required steps and deals is necessary to qualify. This page is not affiliated with, endorsed by, or sponsored by any brands shown. Eligibility and availability vary by region.</p>
+    <p class="disclaimer-static">This is not a guaranteed prize or giveaway. Completing all steps and deals is required to be considered for a reward. Results vary — most participants do not receive a reward. This page is independently operated and is not affiliated with, endorsed by, or sponsored by any brand, company, or celebrity.</p>
 
   </div>
 
